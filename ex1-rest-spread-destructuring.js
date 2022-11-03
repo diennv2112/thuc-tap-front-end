@@ -28,3 +28,40 @@
 // a. [1, 2], [3, 4] => [1, 2, 3, 4]
 // viết hàm ghép 2 đối tượng thành một đối tượng
 // {name: 'david', age: '29'}, {homeTown: 'Ha Noi', gender: 1} => {name: 'david', age: '29', homeTown: 'Ha Noi', gender: 1}
+// bai 1
+// function sum(...rest){
+//     console.log(rest);
+//     return rest.reduce((total, value)=>{
+//         // console.log(current);
+//         return total + value;
+//     },0)
+// }
+// console.log(sum(2,3,4))
+// bai 2
+// function maBuuChinh(arr){
+//     return arr.map((item)=>{
+//         [a,b,...rest]=item.code
+//         return rest
+//     })
+// }
+// console.log(maBuuChinh(MaBuiChinh))
+// bai 3
+// const data1 = [3, 4]
+// const data2 = [5, 6]
+// const data3 = {name: 'david', age: '29'}
+// const data4 = {name: 'david', age: '29', homeTown: 'Ha Noi', gender: 1}
+// function mergeSpread(...rest){
+//     let myData = []
+//     rest.forEach((item)=>{
+//         myData.push(...item)
+//     })
+//     return myData
+// }
+// console.log(mergeSpread(data1,data2)); 
+
+// function mergeSpreadSecond(...rest){
+//     return rest.reduce((total,child)=>{
+//         return {...total,...child}
+//      },{})
+// }
+// console.log( mergeSpreadSecond(data3,data4));
