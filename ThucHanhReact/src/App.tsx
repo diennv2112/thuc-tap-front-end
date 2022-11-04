@@ -1,15 +1,15 @@
 import { useState } from "react";
 import "./App.css";
 
-function App() {
+const App = () => {
   let [count, setCount] = useState<number>(0);
-  function decreasing() {
+  const decreasing = () => {
     if (count == 0) return setCount((count = 0));
     setCount(count - 1);
-  }
-  function increasing() {
+  };
+  const increasing = () => {
     setCount(count + 1);
-  }
+  };
   return (
     <div className="App">
       <div className="flex justify-center">
@@ -31,6 +31,6 @@ function App() {
       </div>
     </div>
   );
-}
+};
 
 export default App;
